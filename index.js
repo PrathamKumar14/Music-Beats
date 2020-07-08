@@ -56,11 +56,21 @@ function makeSound(key){
 }
 
 function buttonAnimation(currentKey){
+
+  var animation = document.querySelector(".circle");
+  animation.classList.add("temp-circle");
+  
   var activeButton = document.querySelector("." +currentKey);
   activeButton.classList.add("pressed");
+
   setTimeout(function (){
     activeButton.classList.remove("pressed");
   }, 100);
+
+  setTimeout(function (){
+    animation.classList.remove("temp-circle");
+  }, 6000);
+
 }
 
 // Funtion for Animation delar
