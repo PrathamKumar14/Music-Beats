@@ -12,12 +12,17 @@ header {
     color: #092532;
 }
 
+header > h1 {
+    -webkit-text-stroke: 1px #ffa372;
+}
+
 .button {
     position: absolute;
     bottom: 20px;
-    width: 100%;
+    width: 80%;
     display: flex;
-    background-color: #e79cc2;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .button > div {
@@ -27,32 +32,37 @@ header {
     flex: 1;
     margin: 10px;
     box-sizing: border-box;
-    border: 2px solid black;
+    border: 6px solid black;
+    color: #fff;
     border-radius: 50px;
     font-size: 30px;
 }
 
 .btn-1 {
-    background: red;
+    background: #00005c;
 }
 
 .btn-2 {
-    background: yellow;
+    background: #ffd31d;
 }
 
 .btn-3 {
-    background: blue;
+    background: #eb6383;
 }
 
 .btn-4 {
-    background: purple;
+    background: #ff5200;
 }
 
 .btn-5 {
-    background: peru;
+    background: #162447;
 }
 
 .btn-6 {
-    background: orange;
+    background: #e43f5a;
 }
 
+.pressed {
+    box-shadow: 0 3px 4px 0 #DBEDF3;
+    opacity: 0.5;
+  }
