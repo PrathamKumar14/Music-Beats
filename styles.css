@@ -12,3 +12,47 @@ header {
     color: #092532;
 }
 
+.button {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    background-color: #e79cc2;
+}
+
+.button > div {
+    font-family: 'Poppins', sans-serif;
+    width: 100px;
+    height: 100px;
+    flex: 1;
+    margin: 10px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 50px;
+    font-size: 30px;
+}
+
+.btn-1 {
+    background: red;
+}
+
+.btn-2 {
+    background: yellow;
+}
+
+.btn-3 {
+    background: blue;
+}
+
+.btn-4 {
+    background: purple;
+}
+
+.btn-5 {
+    background: peru;
+}
+
+.btn-6 {
+    background: orange;
+}
+
