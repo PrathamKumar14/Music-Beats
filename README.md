@@ -1,3 +1,3 @@
 # Music-Beats
 
-Create your own music beats
+Create your own music beats.
