@@ -6,19 +6,20 @@ for(var i = 0; i < document.querySelectorAll(".button div").length; i++){
 }
 
 function handleClick(){
-//   var buttonInnerhtml = this.innerHTML;
   var buttonInnerhtml = this.firstElementChild.innerHTML;
   makeSound(buttonInnerhtml);
   buttonAnimation(buttonInnerhtml);
+  addAnimationClass(buttonInnerhtml);
 }
 
 // Detecting keyboard press
 
-document.addEventListener("keypress", handleKeyboard);
+document.addEventListener("keypress", handleKeyboard);  //Adding event listener to body
 
 function handleKeyboard(){
   makeSound(event.key);
   buttonAnimation(event.key);
+  addAnimationClass(event.key);
 }
 
 // Universal function for make sound
@@ -56,9 +57,6 @@ function makeSound(key){
 }
 
 function buttonAnimation(currentKey){
-
-  var animation = document.querySelector(".circle");
-  animation.classList.add("temp-circle");
   
   var activeButton = document.querySelector("." +currentKey);
   activeButton.classList.add("pressed");
@@ -67,10 +65,27 @@ function buttonAnimation(currentKey){
     activeButton.classList.remove("pressed");
   }, 100);
 
-  setTimeout(function (){
-    animation.classList.remove("temp-circle");
-  }, 6000);
-
 }
 
-// Funtion for Animation delar
+// ************************ Add Animation on button press/click *************************
+
+function addAnimationClass(currentKey) {
+
+  // check that .circle has temp-circle class or not
+  // if yes remove temp-circle class 
+  // if no add temp-circle class
+
+  var animation = document.querySelector(".circle");
+
+  if(animation.classList.contains("temp-circle")) {
+    animation.classList.remove("temp-circle");
+  } 
+  else {
+    animation.classList.add("temp-circle");
+  }
+
+  setTimeout(function (){
+    animation.classList.remove("temp-circle");
+  }, 2000);
+  
+}
