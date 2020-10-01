@@ -1,5 +1,5 @@
 
-// Detecting button press
+// ************************** Detecting button press ****************************
 
 for(var i = 0; i < document.querySelectorAll(".button div").length; i++){
   document.querySelectorAll(".button div")[i].addEventListener("click", handleClick);
@@ -12,7 +12,7 @@ function handleClick(){
   addAnimationClass(buttonInnerhtml);
 }
 
-// Detecting keyboard press
+// ********************* Detecting keyboard press ****************************
 
 document.addEventListener("keypress", handleKeyboard);  //Adding event listener to body
 
@@ -22,7 +22,7 @@ function handleKeyboard(){
   addAnimationClass(event.key);
 }
 
-// Universal function for make sound
+// ************************** Universal function for make sound **************************
 
 function makeSound(key){
 
